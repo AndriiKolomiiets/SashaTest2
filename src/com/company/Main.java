@@ -11,12 +11,14 @@ public class Main {
         double D = 12.5;
         float F = 12.3F;
         boolean B = true;
+        char C = 'C';
         System.out.print("The first variable is " + S);
         System.out.print(", the second variable is " + I);
         System.out.print(", the third variable is " + L);
         System.out.print(", the fourth variable is " + D);
         System.out.print(", the fifth variable is " + F);
-        System.out.print(", the sixth variable is " + B);
+        System.out.println(", the sixth variable is " + B);
+        System.out.print("The last variable is " + C);
 
     }
 }
