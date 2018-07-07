@@ -1,4 +1,5 @@
 package com.company;
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class TheGame {
@@ -9,10 +10,12 @@ public class TheGame {
         game.setRandom();
         game.Finish();
     }
+
+    int theNumber;
     public void getUserInput(){
         Scanner userInput = new Scanner(System.in);
         System.out.println("Enter your number ");
-        int theNumber = userInput.nextInt();
+        theNumber = userInput.nextInt();
 
         userInput.close();
     }
@@ -29,8 +32,15 @@ public class TheGame {
 
     public void Finish (){
 
-        if ( random ==  ) )
+        if ( random ==  theNumber) {
+            System.out.println("You win! Computer number was " + random);
     }
+    else if ( random < theNumber) {
+            System.out.println("You loose:( Computer number was " + random);
+        }
+        else ( random > theNumber)      {
+            System.out.println("You loose:( Computer number was "+ random);
+        }
 }
 
 }
