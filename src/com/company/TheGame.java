@@ -9,14 +9,15 @@ public class TheGame {
 
     final int random;
 
+    // Constructor TheGame
     public TheGame() {
         random = (int) (Math.random() * 100 + 1);
         System.out.println("The computer's number is " + random);
         System.out.println("*the line above was displayed just for checking mistakes");
         System.out.println(" ");
+    }
 
-
-    public void PerformTheGame() {
+    public void performTheGame() {
         int theNumber = 0;
         int i = 0;
         Scanner userInput = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class TheGame {
 
             // Checking for the winner
             if (random == theNumber) {
-                System.out.println("You win! Computer number was " + random);
+                System.out.println("You win! Computer number was " + random + "\nYou made " + i + " attempt(s)" );
                 theNumber = 500;
             } else if (random < theNumber) {
                 System.out.println("It is less. Try again");
@@ -46,4 +47,4 @@ public class TheGame {
 }
 
 
-}
+
