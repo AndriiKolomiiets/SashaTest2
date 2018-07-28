@@ -13,7 +13,7 @@ public class Person {
         String surname = userInput.next();
         System.out.println("How old are you?");
         String age = userInput.next();
-        userInput.close();
+       // userInput.close();
     }
 
 }
