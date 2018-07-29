@@ -4,15 +4,25 @@ import java.util.*;
 
 public class Person {
 
+    private String name;
+    private String surname;
+    private String age;
+
+    @Override
+    public String toString() {
+        return name + surname + age;
+
+    }
+
     Scanner userInput = new Scanner(System.in);
 
     public void getUserInput() {
         System.out.println("Enter your name:");
-        String name = userInput.next();
+        name = userInput.next();
         System.out.println("Enter your surname:");
-        String surname = userInput.next();
+        surname = userInput.next();
         System.out.println("How old are you?");
-        String age = userInput.next();
+        age = userInput.next();
        // userInput.close();
     }
 
