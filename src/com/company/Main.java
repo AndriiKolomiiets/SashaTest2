@@ -1,50 +1,53 @@
 package com.company;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("The contact input program\nWould you like to create a new contact? (Yes/No)");
+        System.out.println("The contact base program\nIn the next few lines you have to fill an information about person");
         Scanner inputAnswer = new Scanner(System.in);
-        String theAnsver = inputAnswer.nextLine();
-         Person[] personArr = new Person[12];
         int i = 0;
-        while (theAnsver.equals("Yes")) {
+        String theAnswer;
 
-            Person person = new Person();
-//            person.getUserInput();
-//            person.toString();
-                    //System.out.println("Stage 2");
-//            unit[i] = new Person();
-//            unit[i].getUserInput();
-            person.getUserInput();
+        Person[] personArr = new Person[12];
 
-            System.out.println(person.toString());
-            personArr [i] = person;
-                    i++;
-            System.out.println("Do you wont to create one more new contact? (Yes/No)");
-            theAnsver = inputAnswer.nextLine();
-        }
+        Scanner userInput = new Scanner(System.in);
+
+        do {
+            personArr[i] = new Person();
+            int d = i + 1;
+            personArr[i].setPersonNumber(d);
+            System.out.println("Enter his(her) name:");
+            personArr[i].setName(userInput.next());
+            System.out.println("Enter his(her) surname:");
+            personArr[i].setSurname(userInput.next());
+            System.out.println("How old is he(she)?");
+            personArr[i].setAge(userInput.next());
+
+            i++;
+            System.out.println("Would you like to create another contact? (Yes/No)");
+            theAnswer = inputAnswer.nextLine();
+        } while (theAnswer.equals("Yes"));
         int n = i++;
-        System.out.println("You saved " + n + " contacts.");
-        System.out.println(personArr[0]);
         String byeMessage = "Thank you for using this app!\nHave a nice day!";
+
         if (n > 0) {
-            System.out.println("Would you like to print them out to check?");
+            System.out.println("You saved " + n + " contacts.\nWould you like to print them out to check?");
+            theAnswer = inputAnswer.nextLine();
+
+            if (theAnswer.equals("Yes")) {
+
+                System.out.println("There is a complete list of contacts\nPlease, check it out.");
+                for (int k = 0; k < n; k++) {
+                    System.out.println(personArr[k]);
+                }
+                System.out.println(byeMessage);
+            }
+
         } else {
             System.out.println(byeMessage);
         }
-      /*  String printOutInput = inputAnswer.nextLine();
 
-        if (printOutInput.equals("Yes")) {
-            for (int k = i + 1; i > 0; i--) {
-                System.out.println(unit[i]);
-            }
-            System.out.println("byeMessage");
-        } else {
-            System.out.println("byeMessage");
-        }*/
     }
 }
