@@ -6,19 +6,22 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        int sort[] = {12, 65, 687, 14, 10, 56, 18, 954, 1478, 1, 9, 6};
+        int sort[] = {687, 12, 6};
+        System.out.println(Arrays.toString(sort));
+        int minIndex = 0;
 
-        for (int i = sort.length-1; i>=0; i--) {
-            for (int j = 0; j < i; j++)
-                if (sort[j] > sort[j + 1]) {
-                    int temp = sort[j];
-                    sort[j] = sort[j + 1];
-                    sort[j + 1] = temp;
+        for (int i = 0; i < sort.length-1; i++) {
+            for (int j = i; j<sort.length; j++) {
+                if (sort[minIndex] > sort[j]) {
+                    minIndex = j;
                 }
+            }
+            int temp = sort[i];
+            sort[i] = sort[minIndex];
+            sort[minIndex] = temp;
         }
-        for (int i = 0; i < sort.length; i++) {
-            System.out.print(sort[i] + ", ");
-        }
-//        System.out.println(Array%.toString);
+        System.out.println(sort[minIndex]);
+
+        System.out.println(Arrays.toString(sort));
     }
 }
