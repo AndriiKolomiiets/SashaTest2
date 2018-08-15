@@ -36,20 +36,21 @@ public class Main {
 
     }
 
-    public static void selectSort(int arrayToSort2[]) {
+    public static void selectSort(int arrToSort[]) {
 
-        int minIndex = arrayToSort2[0];
-        for (int j = 0; j < arrayToSort2.length; j++) {
-            for (int i = j; i < arrayToSort2.length; i++) {
+        int minIndex = arrToSort[0];
+        for (int j = 0; j < arrToSort.length; j++) {
+            for (int i = j; i < arrToSort.length; i++) {
 
-                if (arrayToSort2[i] < minIndex) {
-                    minIndex = arrayToSort2[i];
+                if (arrToSort[i] < minIndex) {
+                    
+                    minIndex = arrToSort[i];
                 }
 
             }
-            arrayToSort2[j] = minIndex;
+            arrToSort[j] = minIndex;
 
         }
-        System.out.println(Arrays.toString(arrayToSort2));
+        System.out.println(Arrays.toString(arrToSort));
     }
 }
