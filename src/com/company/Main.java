@@ -7,50 +7,41 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int testArray[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896};
+        int testArray[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896, 23, 2};
         System.out.println(Arrays.toString(testArray));
 
-//        bubbleSort(testArray);
         selectSort(testArray);
+        bubbleSort(testArray);
 
     }
 
-    //Sort by bubble method
-    public static void bubbleSort(int arrayToSort[]) {
-        System.out.println("1");
-        for (int i = arrayToSort.length - 1; i < 0; i--) {
-            System.out.println("2");
-            for (int j = 0; j > i; j++) {
-                if (arrayToSort[j] > arrayToSort[j + 1]) {
-                    int tmp = arrayToSort[j];
-                    arrayToSort[j] = arrayToSort[j + 1];
-                    arrayToSort[j + 1] = tmp;
-                    System.out.println(arrayToSort[j] + arrayToSort[j + 1]);
+    public static void bubbleSort(int arr[]) {
+
+        for (int j = arr.length; j > 0; j--) {
+            for (int i = 0; i < j - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
                 }
             }
-
-            System.out.println(Arrays.toString(arrayToSort));
-
         }
-
-
+        System.out.println(Arrays.toString(arr));
     }
 
-    public static void selectSort(int arrToSort[]) {
-
-        int minIndex = arrToSort[0];
-        for (int j = 0; j < arrToSort.length; j++) {
-            for (int i = j; i < arrToSort.length; i++) {
-
-                if (arrToSort[i] < minIndex) {
-                    
-                    minIndex = arrToSort[i];
+    public static void selectSort(int arr[]) {
+        for (int j = 0; j < arr.length - 1; j++) {
+            int minIndex = j;
+            for (int i = j + 1; i < arr.length; i++) {
+                if (arr[i] < arr[minIndex]) {
+                    minIndex = i;
                 }
-
             }
-            arrToSort[j] = minIndex;
+            int tmp = arr[minIndex];
+            arr[minIndex] = arr[j];
+            arr[j] = tmp;
 
         }
-        System.out.println(Arrays.toString(arrToSort));
+        System.out.println(Arrays.toString(arr));
     }
 }
