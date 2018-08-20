@@ -10,10 +10,29 @@ public class Main {
         int testArray[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896, 23, 2};
         System.out.println(Arrays.toString(testArray));
 
-        selectSort(testArray);
-        bubbleSort(testArray);
+//        selectSort(testArray);
+//        bubbleSort(testArray);
+        insertSort(testArray);
 
     }
+
+    public static void insertSort(int arr[]) {
+
+        for (int j = 1; j < arr.length; j++) {
+            int selected = j;
+            for (int i = 0; i < j; i++) {
+                if (arr[i] > arr[selected]) {
+                    int temp = arr[selected];
+                    arr[selected] = arr[i];
+                    arr[i] = temp;
+                }
+
+            }
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
 
     public static void bubbleSort(int arr[]) {
 
