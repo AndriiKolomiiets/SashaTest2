@@ -1,21 +1,15 @@
-package com.company.AdvancedSorting;
+package com.company;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import com.company.AdvancedSorting.MergeSorting;
+import org.junit.Test;
 
-import java.util.Arrays;
+import java.util.*;
 
 class MergeSortingTest {
 
-    MergeSorting mSorting;
+    MergeSorting mSort = new MergeSorting();
 
-    @BeforeEach
-    void setUp() {
-        mSorting = new MergeSorting();
-    }
-
-    @Test
-    void mSort() {
+    public void testMergeSort() {
         System.out.println("Merge sort test");
         int testArr[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896, 23, 2, -1, 777};
         int testArr1[] = {0};
@@ -26,10 +20,10 @@ class MergeSortingTest {
         int[] etalonForTest = testArr.clone();
         Arrays.sort(etalonForTest);
         System.out.println("Sorted etalon array: " + Arrays.toString(etalonForTest));
-        mSorting.mSort(testArr, 0, testArr.length);
+        mSort.mSort(testArr, 0, testArr.length);
         System.out.println("Sorted test arrays: /n1. General array: "  + Arrays.toString(testArr) + "/n2. No data array: " +
                 Arrays.toString(testArr0) + "/n3. Zero array: " + Arrays.toString(testArr1) + "/n4. Several zeros array: " + Arrays.toString(testArr2));
 
-
     }
+
 }

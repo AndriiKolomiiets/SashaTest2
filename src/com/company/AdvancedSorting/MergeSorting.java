@@ -14,6 +14,7 @@ public class MergeSorting {
 
 
     private void merge(int arr[], int from, int m, int length) {
+
         int leftPartLength = m - from + 1;
         int rightPartLength = length - m;
         int leftTempArr[] = new int[leftPartLength];
@@ -22,8 +23,12 @@ public class MergeSorting {
         for (int i=0; i<leftPartLength; ++i){
             leftTempArr[i] = arr[from+i];
         }
-        for (int j=0; j<rightPartLength; ++j){
-            rightTempArr[j] = arr[m+j];
+
+//        if (from == m){
+//            m = 1;
+//        }
+        for (int j =0; j<rightPartLength; ++j){
+            rightTempArr[j] = arr[m+j+1];
         }
 
 //        int [] tempArr = new int[leftPartLength+rightPartLength];
@@ -34,15 +39,13 @@ public class MergeSorting {
             if (rightTempArr[rightTempIndex]<leftTempArr[leftTempIndex]){
                 arr[tempArrIndex] = rightTempArr[rightTempIndex];
                 rightTempIndex++;
-            }
-            if (leftTempArr[leftTempIndex]<rightTempArr[rightTempIndex]){
+            }else if (rightTempArr[rightTempIndex]>leftTempArr[leftTempIndex]){
                 arr[tempArrIndex] = leftTempArr[leftTempIndex];
                 leftTempIndex++;
             }
             tempArrIndex++;
         }
-
-        while (rightTempIndex<=rightPartLength){
+        while (rightTempIndex<rightPartLength){
             arr[tempArrIndex] = rightTempArr[rightTempIndex];
             tempArrIndex++;
             rightTempIndex++;
