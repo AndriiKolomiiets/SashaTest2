@@ -1,5 +1,7 @@
 package com.company.AdvancedSorting;
 
+import java.util.Arrays;
+
 public class MergeSorting {
 
     public void mSort(int arr[], int from, int length) {
@@ -30,20 +32,24 @@ public class MergeSorting {
         for (int j =0; j<rightPartLength; ++j){
             rightTempArr[j] = arr[m+j+1];
         }
+        System.out.println(Arrays.toString(leftTempArr));
+        System.out.println(Arrays.toString(rightTempArr));
 
 //        int [] tempArr = new int[leftPartLength+rightPartLength];
         int rightTempIndex = 0, leftTempIndex = 0;
         int tempArrIndex = from;
 
-        while (rightTempIndex<rightPartLength && leftTempIndex<leftPartLength){
-            if (rightTempArr[rightTempIndex]<leftTempArr[leftTempIndex]){
+        while (rightTempIndex<rightPartLength && leftTempIndex<leftPartLength) {
+
+            if (rightTempArr[rightTempIndex] <= leftTempArr[leftTempIndex]) {
                 arr[tempArrIndex] = rightTempArr[rightTempIndex];
                 rightTempIndex++;
-            }else if (rightTempArr[rightTempIndex]>leftTempArr[leftTempIndex]){
+                tempArrIndex++;
+            } else if (rightTempArr[rightTempIndex] > leftTempArr[leftTempIndex]) {
                 arr[tempArrIndex] = leftTempArr[leftTempIndex];
                 leftTempIndex++;
+                tempArrIndex++;
             }
-            tempArrIndex++;
         }
         while (rightTempIndex<rightPartLength){
             arr[tempArrIndex] = rightTempArr[rightTempIndex];

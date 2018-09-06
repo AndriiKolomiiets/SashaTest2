@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.AdvancedSorting.BinarySearch;
 import com.company.AdvancedSorting.MergeSorting;
 
 import java.util.*;
@@ -12,6 +13,7 @@ public class Main {
         int minimalTestArr[] = {200,178,150};
         int testArray[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896, 23, 2};
         System.out.println(Arrays.toString(testArray));
+//        System.out.println(Arrays.toString(minimalTestArr));
 
 //        selectSort(testArray);
 //        bubbleSort(testArray);
@@ -20,11 +22,12 @@ public class Main {
         // -->>> still in process
 // >>MyCode
         MergeSorting testingSort = new MergeSorting();
+//        BinarySearch testingSort = new BinarySearch();
 //        System.out.println(Arrays.toString(minimalTestArr));
-//        testingSort.mSort(testArray,0,testArray.length-1);
-        testingSort.mSort(minimalTestArr, 0, minimalTestArr.length-1);
-        System.out.println(Arrays.toString(minimalTestArr));
-//        System.out.println(Arrays.toString(testArray));
+        testingSort.mSort(testArray,0,testArray.length-1);
+//        testingSort.mSort(minimalTestArr, 0, minimalTestArr.length-1);
+//        System.out.println(Arrays.toString(minimalTestArr));
+        System.out.println(Arrays.toString(testArray));
 // >>FinishedCode
         /*MergeSorting testingSort = new MergeSorting();
         System.out.println(Arrays.toString(minimalTestArr));
