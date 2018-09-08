@@ -32,8 +32,8 @@ public class MergeSorting {
         for (int j =0; j<rightPartLength; ++j){
             rightTempArr[j] = arr[m+j+1];
         }
-        System.out.println(Arrays.toString(leftTempArr));
-        System.out.println(Arrays.toString(rightTempArr));
+//        System.out.println(Arrays.toString(leftTempArr));
+//        System.out.println(Arrays.toString(rightTempArr));
 
 //        int [] tempArr = new int[leftPartLength+rightPartLength];
         int rightTempIndex = 0, leftTempIndex = 0;
