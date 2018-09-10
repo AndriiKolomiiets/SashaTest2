@@ -1,7 +1,6 @@
 package com.company;
 
-import com.company.AdvancedSorting.BinarySearch;
-import com.company.AdvancedSorting.MergeSorting;
+import com.company.AdvancedSorting.QuickSearch;
 
 import java.util.*;
 
@@ -15,32 +14,22 @@ public class Main {
         System.out.println(Arrays.toString(testArray));
 //        System.out.println(Arrays.toString(minimalTestArr));
 
+// -->>> still in process
+        QuickSearch testingSort = new QuickSearch();
+        testingSort.qSort(testArray, 0, 12);
+        System.out.println(Arrays.toString(testArray));
+
+
+
+// >>FinishedCode --------------------------------------------
+
+//MergeSorting
+        /*MergeSorting testingSort = new MergeSorting();
+        testingSort.mSort(testArray,0,testArray.length-1);
+        System.out.println(Arrays.toString(testArray));*/
 //        selectSort(testArray);
 //        bubbleSort(testArray);
 //        insertSort(testArray);
-
-        // -->>> still in process
-// >>MyCode
-        MergeSorting testingSort = new MergeSorting();
-//        BinarySearch testingSort = new BinarySearch();
-//        System.out.println(Arrays.toString(minimalTestArr));
-        testingSort.mSort(testArray,0,testArray.length-1);
-//        testingSort.mSort(minimalTestArr, 0, minimalTestArr.length-1);
-//        System.out.println(Arrays.toString(minimalTestArr));
-        System.out.println(Arrays.toString(testArray));
-// >>FinishedCode
-        /*MergeSorting testingSort = new MergeSorting();
-        System.out.println(Arrays.toString(minimalTestArr));
-        testingSort.sort(testArray,0,testArray.length-1);
-        System.out.println(Arrays.toString(testArray));*/
-// >>SimpleTests
-        /*int l = 6;
-        int r = 10;
-        int m = (l+r)/2;
-        int tempR = m-l;
-        int tempL = r - m;
-        System.out.println(m);
-        System.out.println(tempR+ "  -  "+ tempL);*/
     }
 
 //-----------------------------------------------------------------------------
