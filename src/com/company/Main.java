@@ -1,6 +1,7 @@
 package com.company;
 
-import com.company.AdvancedSorting.QuickSearch;
+import com.company.AdvancedSorting.EtalonQS;
+import com.company.AdvancedSorting.QuickSort;
 
 import java.util.*;
 
@@ -8,6 +9,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         int simpleTestArr[] = {12,6,4,15};
         int minimalTestArr[] = {200,178,150};
         int testArray[] = {687, 12, 6, 4, 1, 23, 345, 0, 9, 9, 45896, 23, 2};
@@ -15,9 +17,18 @@ public class Main {
 //        System.out.println(Arrays.toString(minimalTestArr));
 
 // -->>> still in process
-        QuickSearch testingSort = new QuickSearch();
-        testingSort.qSort(testArray, 0, 12);
+
+
+        int n = testArray.length;
+
+        EtalonQS ob = new EtalonQS();
+        ob.sort(testArray, 0, n-1);
+
+        System.out.println("sorted array");
         System.out.println(Arrays.toString(testArray));
+       /* QuickSort testingSort = new QuickSort();
+        testingSort.qSort(testArray, 0, 12);
+        System.out.println(Arrays.toString(testArray));*/
 
 
 
