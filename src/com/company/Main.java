@@ -18,17 +18,16 @@ public class Main {
 
 // -->>> still in process
 
-
+/*Qsort pattern
         int n = testArray.length;
-
         EtalonQS ob = new EtalonQS();
         ob.sort(testArray, 0, n-1);
-
         System.out.println("sorted array");
-        System.out.println(Arrays.toString(testArray));
-       /* QuickSort testingSort = new QuickSort();
-        testingSort.qSort(testArray, 0, 12);
         System.out.println(Arrays.toString(testArray));*/
+
+        QuickSort testingSort = new QuickSort();
+        testingSort.qSort(testArray, 0, 12);
+        System.out.println(Arrays.toString(testArray));
 
 
 
