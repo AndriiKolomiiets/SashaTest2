@@ -25,9 +25,9 @@ public class Main {
         System.out.println("sorted array");
         System.out.println(Arrays.toString(testArray));*/
 
-        QuickSort testingSort = new QuickSort();
+        /*QuickSort testingSort = new QuickSort();
         testingSort.qSort(testArray, 0, 12);
-        System.out.println(Arrays.toString(testArray));
+        System.out.println(Arrays.toString(testArray));*/
 
 
 
